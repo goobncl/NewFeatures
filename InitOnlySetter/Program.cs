@@ -2,11 +2,30 @@
 
 namespace InitOnlySetter
 {
+    public class Order
+    {
+        /// <summary>
+        /// Order Id of the order
+        /// This can be only set at time of Order initialization
+        /// </summary>
+        public int OrderId { get; init; }
+        public decimal TotalPrice { get; init; }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Init Only Setter Porject");
+            Order orderObject = new Order
+            {
+                OrderId = 1,
+                TotalPrice = 10.0M
+            };
+
+            // We will get an error if we try to change the OrderId post object creation
+            //orderObject.OrderId = 100;
+
+            Console.WriteLine($"Order Id: {orderObject.OrderId}, Total price: {orderObject.TotalPrice}");
         }
     }
 }
