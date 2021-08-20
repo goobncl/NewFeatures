@@ -1,0 +1,62 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PatternMatching",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/PatternMatching/bin/Debug/net5.0/PatternMatching.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "TopLevelStatements",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/TopLevelStatements/bin/Debug/net5.0/TopLevelStatements.dll",
+            "args": [
+                "A", "B", "C", "D", "E"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "profiles": {
+                "TopLevelStatements": {
+                    "commandName": "run",
+                    "commandLineArgs": "arg1 arg2"
+                }
+            },
+        },
+        {
+            "name": "RecordType",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/RecordType/bin/Debug/net5.0/RecordType.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/RecordType",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "InitOnlySetter",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/InitOnlySetter/bin/Debug/net5.0/InitOnlySetter.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/InitOnlySetter",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
