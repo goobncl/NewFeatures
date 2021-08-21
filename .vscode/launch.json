@@ -2,6 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "StaticAnonymousFunction",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/StaticAnonymousFunction/bin/Debug/net5.0/StaticAnonymousFunction.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
             "name": "TargetTypedNew",
             "type": "coreclr",
             "request": "launch",
