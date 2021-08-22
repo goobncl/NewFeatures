@@ -21,7 +21,7 @@ namespace StaticAnonymousFunction
 
     public class Demo
     {
-        private string formattedText = "{0} It was developed by Microsoft's Anders Hejlsberg in the year 2000.";
+        private const string formattedText = "{0} It was developed by Microsoft's Anders Hejlsberg in the year 2000.";
         
         void DisplayText(Func<string, string> func)
         {
@@ -30,7 +30,7 @@ namespace StaticAnonymousFunction
 
         public void Display()
         {
-            DisplayText(text => string.Format(formattedText, text));
+            DisplayText(static text => string.Format(formattedText, text));
         }
     }
 
@@ -40,7 +40,7 @@ namespace StaticAnonymousFunction
         {
 
             new Demo().Display();
-            
+
             /*var list = new MyList();
 
             foreach (var item in list)
