@@ -19,11 +19,29 @@ namespace StaticAnonymousFunction
         }
     }
 
+    public class Demo
+    {
+        private string formattedText = "{0} It was developed by Microsoft's Anders Hejlsberg in the year 2000.";
+        
+        void DisplayText(Func<string, string> func)
+        {
+            Console.WriteLine(func("C# is a popular programming language."));
+        }
+
+        public void Display()
+        {
+            DisplayText(text => string.Format(formattedText, text));
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            var list = new MyList();
+
+            new Demo().Display();
+            
+            /*var list = new MyList();
 
             foreach (var item in list)
             {
@@ -34,7 +52,8 @@ namespace StaticAnonymousFunction
             it.MoveNext();
             Console.WriteLine(it.Current);
             it.MoveNext();
-            Console.WriteLine(it.Current);
+            Console.WriteLine(it.Current);*/
+
         }
 
         string formatString = $"{0}-{1}";
